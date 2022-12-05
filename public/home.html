@@ -59,7 +59,7 @@
                         fetch("https://102x7ynydi.execute-api.us-east-1.amazonaws.com/default/visitor-count", requestOptions)
                         .then(response => { 
                             return response.text();})
-                        .then(data => document.getElementById("VisitorCount").innerHTML = "   Visitor Count: " + data)
+                        .then(result => document.getElementById("VisitorCount").innerHTML = "   Visitor Count: " + result)
                         .catch(error => console.log('error', error)); 
                     </script>
               </span>
