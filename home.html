@@ -38,7 +38,31 @@
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
             <div class="navbar-brand">
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Olin Osborne III</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Olin Osborne III</a>
+                  <a id="VisitorCount" href="index.html"></a>
+                    <script>
+                    let ConvertStringToHTML = function (str) {
+                        let parser = new DOMParser();
+                        let doc = parser.parseFromString(str, 'text/html');
+                        return doc.body;};
+
+                    var requestOptions = {
+                        method: 'GET',
+                        redirect: 'follow',
+                        mode: "cors",
+                        header : {
+                            'Access-Control-Allow-Origin': 'https://olins-resume.com/test1.html',
+                            'Access-Control-Allow-Headers': '*',
+                            'Access-Control-Allow-Methods': '*',
+                            'Access-Control-Expose-Headers' : '*',
+                            'Content-Type': 'application/json'}};
+                        fetch("https://102x7ynydi.execute-api.us-east-1.amazonaws.com/default/visitor-count", requestOptions)
+                        .then(response => { 
+                            return response.text();})
+                        .then(result => document.getElementById("VisitorCount").innerHTML = "   Visitor Count: " + result)
+                        .catch(error => console.log('error', error)); 
+                    </script>
+              </span>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="work-experience.html">Work Experience</a></li>
