@@ -38,8 +38,8 @@
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
             <div class="navbar-brand">
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Olin Osborne III</a>
-                  <a id="VisitorCount" href="index.html"></a>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="home.html">Olin Osborne III</a>
+                  <a id="VisitorCount"></a>
                     <script>
                     let ConvertStringToHTML = function (str) {
                         let parser = new DOMParser();
@@ -59,7 +59,7 @@
                         fetch("https://102x7ynydi.execute-api.us-east-1.amazonaws.com/default/visitor-count", requestOptions)
                         .then(response => { 
                             return response.text();})
-                        .then(result => document.getElementById("VisitorCount").innerHTML = "   Visitor Count: " + result)
+                        .then(data => document.getElementById("VisitorCount").innerHTML = "   Visitor Count: " + data)
                         .catch(error => console.log('error', error)); 
                     </script>
               </span>
