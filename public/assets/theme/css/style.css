@@ -76,6 +76,7 @@ a {
   word-break: break-word;
   word-wrap: break-word;
   font-weight: 400;
+  padding: 5px;
 }
 
 b,
