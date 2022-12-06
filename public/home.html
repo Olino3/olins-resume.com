@@ -38,8 +38,8 @@
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
             <div class="navbar-brand">
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Olin Osborne III</a>
-                  <a id="VisitorCount" href="index.html"></a>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="home.html">Olin Osborne III</a>
+                  <a id="VisitorCount"></a>
                     <script>
                     let ConvertStringToHTML = function (str) {
                         let parser = new DOMParser();
@@ -51,9 +51,9 @@
                         redirect: 'follow',
                         mode: "cors",
                         header : {
-                            'Access-Control-Allow-Origin': 'https://olins-resume.com/test1.html',
+                            'Access-Control-Allow-Origin': 'https://olins-resume.com/',
                             'Access-Control-Allow-Headers': '*',
-                            'Access-Control-Allow-Methods': '*',
+                            'Access-Control-Allow-Methods': 'GET',
                             'Access-Control-Expose-Headers' : '*',
                             'Content-Type': 'application/json'}};
                         fetch("https://102x7ynydi.execute-api.us-east-1.amazonaws.com/default/visitor-count", requestOptions)
